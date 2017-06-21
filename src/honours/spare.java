@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
 
-public class Solution {
+public class spare {
 
 	static List<Vertex> solution ;
 	static List<Vertex> solutionBaseline ;

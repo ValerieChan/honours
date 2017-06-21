@@ -1,0 +1,95 @@
+
+Generation: 0
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 70.0
+Tree 0:
+ (* (* (max X NS) (* Y Y)) (+ (+ t X) t))
+
+Generation: 1
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 70.0
+Tree 0:
+ (* (* (max X NS) (* Y Y)) (+ (+ t X) t))
+
+Generation: 2
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 70.0
+Tree 0:
+ (- (+ (max (max X X) (max t t)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- X (min (+ (/ X Y) (max t Y)) Y))))
+
+Generation: 3
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 70.0
+Tree 0:
+ (- (+ (max (max X X) (max t t)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) Y))))
+
+Generation: 4
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 70.0
+Tree 0:
+ (- (+ (max (max X X) (/ t t)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) Y))))
+
+Generation: 5
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 70.0
+Tree 0:
+ (- (+ (max (max (+ Y X) X) (+ (/ t NS) (max t (/ Y Y)))) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (/ NS Y))))
+
+Generation: 6
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 80.0
+Tree 0:
+ (- (+ (max (max X X) (max Y NS)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) Y))))
+
+Generation: 7
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 80.0
+Tree 0:
+ (- (+ (max (max X X) (max Y NS)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) (max X t)))))
+
+Generation: 8
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 80.0
+Tree 0:
+ (- (+ (max (+ (min (* Y NS) Y) (min (+ (* X Y) (min Y Y)) (max (max NS t) (/ NS X)))) (- (+ Y X) (/ t X))) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (* Y Y) Y))))
+
+Generation: 9
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 80.0
+Tree 0:
+ (- (+ (max (max X X) (+ (max (max X NS) (max t t)) (max (min Y Y) (/ Y Y)))) (max (min Y Y) (/ (+ (+ (min t NS) X) t) Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) Y))))
+
+Generation: 10
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: 80.0
+Tree 0:
+ (- (+ (max (max X X) (max Y NS)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) (max X t)))))
+
+Best Individual of Run:
+Subpopulation 0:
+Evaluated: true
+Fitness: 80.0
+Tree 0:
+ (- (+ (max (max X X) (max Y NS)) (max (min Y Y) (/ Y Y))) (min (* (- NS X) (* t Y)) (- (+ X X) (min (+ (/ X Y) (max t Y)) Y))))
