@@ -53,8 +53,8 @@ public class SimpleEvolutionState extends EvolutionState
         statistics.preInitializationStatistics(this);
         population = initializer.initialPopulation(this, 0); // unthreaded
         statistics.postInitializationStatistics(this);
-        System.out.println("num eva; simple evaluationstate"+numEvaluations);
-        System.out.println(numGenerations+ " ");
+        //System.out.println("num eva; simple evaluationstate"+numEvaluations);
+        //System.out.println(numGenerations+ " ");
         
         // Compute generations from evaluations if necessary
         if (numEvaluations > UNDEFINED)

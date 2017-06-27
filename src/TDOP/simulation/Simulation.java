@@ -88,7 +88,7 @@ public abstract class Simulation {
 
     while(systemState.info.getTmax() > systemState.getClockTime() && !systemState.getPlacesUnvisited().isEmpty()){
     	
-    	POI next = getRule().placePriority(systemState.getPlacesUnvisited(), systemState);
+    	POI next = getRule().placePriority(current, systemState.getPlacesUnvisited(), systemState);
     	double nextTime = systemState.getClockTime() + systemState.info.travelTime(current, next, systemState.getClockTime());
     	
     //	System.out.println(current.id() +" " +totalNodeScore()+" " + systemState.getClockTime() + " "
@@ -101,7 +101,7 @@ public abstract class Simulation {
     		 systemState.setClockTime(systemState.getClockTime() +newTime);
     		 visitPOI(systemState.info.endPOI());
     		 
-    		 System.out.println("ending without adding any extra:" +totalNodeScore());
+    		 //System.out.println("ending without adding any extra:" +totalNodeScore());
     		 break;
 			}
 
@@ -111,7 +111,7 @@ public abstract class Simulation {
 		 current = next;
 
     }
-    System.out.println(systemState.getClockTime());
+   // System.out.println(systemState.getClockTime());
     //System.out.println("ending "+totalNodeScore());
 }
 
@@ -127,7 +127,7 @@ private POI getSystemStatePOI(POI poi) {
 		for(POI p : placesUnvisitedList){
 			if(systemState.info.getArc(currentlyAt, getSystemStatePOI(p)) != null){accessible.add(p.copy());}
 		}
-		System.out.println("places unvisited size: "+placesUnvisitedList.size());
+		//System.out.println("places unvisited size: "+placesUnvisitedList.size());
 		return accessible;
 	}
 
@@ -162,7 +162,7 @@ private POI getSystemStatePOI(POI poi) {
         case TOTAL_NODE_SCORE:
         	double score = totalNodeScore();
         	if(score  > 100){
-        	System.out.println("simulation-objectiveValue- success- " + score);
+        	//System.out.println("simulation-objectiveValue- success- " + score);
         	}
             return score;//(totalNodeScore());
         }

@@ -16,15 +16,23 @@ public class CalcPriorityProblem extends Problem implements SimpleProblemForm {
 
     private POI poi;
     private SystemState systemState;
+	private POI current;
+	private POI possible;
 
-    public CalcPriorityProblem(POI poi,
-                               SystemState systemState) {
+    public CalcPriorityProblem(POI poi, SystemState systemState) {
         this.poi=poi;
         this.systemState = systemState;
     }
 
 
-    public SystemState getSystemState() {
+    public CalcPriorityProblem(POI current, POI possible, SystemState systemState) {
+    	this.current = current;
+    	this.possible = possible;
+        this.systemState = systemState;
+	}
+
+
+	public SystemState getSystemState() {
         return systemState;
     }
 
@@ -33,6 +41,12 @@ public class CalcPriorityProblem extends Problem implements SimpleProblemForm {
                          int subpopulation, int threadnum) {
     }
 
+    public POI getCurrentPOI(){
+    	return current;
+    }
+    public POI getPossiblePOI(){
+    	return possible;
+    }
 	public POI getPlaceOfInterest() {
 		return poi;
 	}

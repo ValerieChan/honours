@@ -25,7 +25,7 @@ stat.num-children = 1
 stat.child.0 = ec.gp.koza.KozaShortStatistics
 stat.child.0.file = $outtabular.stat
 
-generations = 11
+generations = 15
 #51
 quit-on-run-complete = true
 

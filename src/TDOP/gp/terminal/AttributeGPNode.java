@@ -46,9 +46,10 @@ public class AttributeGPNode extends GPNode {
         CalcPriorityProblem calcPrioProb = ((CalcPriorityProblem)problem);
 
         DoubleData data = ((DoubleData)input);
-        data.value = attribute.value(
-                calcPrioProb.getPlaceOfInterest(),
-                calcPrioProb.getSystemState());
+       // data.value = attribute.value(
+       //         calcPrioProb.getPlaceOfInterest(),
+       //         calcPrioProb.getSystemState());
+        data.value = attribute.value(calcPrioProb.getCurrentPOI(), calcPrioProb.getPossiblePOI(), calcPrioProb.getSystemState());
     }
 
     @Override

@@ -186,14 +186,14 @@ public class GPRuleEvolutionState extends SimpleEvolutionState {
 			result = evolve();
 
 			long finish = TDOP.util.Timer.getCpuTime();
-			double duration = (finish - start) ;/// 1000000000;
+			double duration = (finish - start)/ 1000000 ;/// 1000000000;
 			genTimes.add(duration);
 			totalTime += duration;
 
-			output.message("[gp rule evaluation] Generation " + (generation-1) + " elapsed " + duration + " seconds.");
+			output.message("Generation " + (generation-1) + " elapsed " + duration + " milli-seconds.");
         }
 
-		output.message("The whole program elapsed " + totalTime + " seconds.");
+		output.message("The whole program elapsed " + totalTime + " milli-seconds.");
 
 		File timeFile = new File("job." + jobSeed + ".time.csv");
 		try {

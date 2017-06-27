@@ -100,13 +100,13 @@ public abstract class AbstractRule {
 	}
     
     
-    public POI placePriority(List<POI> unvisited, SystemState systemState){
+    public POI placePriority(POI currentlyAt, List<POI> unvisited, SystemState systemState){
     	POI best = unvisited.get(0);
-    	best.setPriority(priority(best, systemState));
+    	best.setPriority(priority(currentlyAt, best, systemState));
     	for(int i =1; i< unvisited.size(); i++){
     		//System.out.println("abstract rule-inside loop "+i);
     		POI current = unvisited.get(i);
-    		current.setPriority(priority(current, systemState));
+    		current.setPriority(priority(currentlyAt, current, systemState));
     		if(current.priorTo(best)){
     			//System.out.println("abstract rule-found a better one");
     			best = current;
@@ -136,6 +136,6 @@ public abstract class AbstractRule {
         return priorOp;
     }*/
 
-    public abstract double priority(POI poi, SystemState systemState);
+    public abstract double priority(POI poi, POI current, SystemState systemState);
 
 }

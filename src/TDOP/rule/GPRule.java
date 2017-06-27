@@ -61,10 +61,8 @@ public class GPRule extends AbstractRule {
         ignore(gpTree.child, feature, ignorer);
     }
 
-    public double priority(POI poi, 
-                           SystemState systemState) {
-        CalcPriorityProblem calcPrioProb =
-                new CalcPriorityProblem(poi, systemState);
+    public double priority(POI poi, SystemState systemState) {
+        CalcPriorityProblem calcPrioProb = new CalcPriorityProblem(poi, systemState);
         //System.out.println("calculating poi (gp rule) " + calcPrioProb);
         DoubleData tmp = new DoubleData();
         //System.out.println(tmp.value);
@@ -72,4 +70,13 @@ public class GPRule extends AbstractRule {
         //System.out.println("done");
         return tmp.value;
     }
+
+	@Override
+	public double priority(POI current, POI possible, SystemState systemState) {
+		CalcPriorityProblem calcPrioProb = new CalcPriorityProblem(current, possible, systemState);
+		DoubleData tmp = new DoubleData();
+		gpTree.child.eval(null, 0, tmp, null, null, calcPrioProb);
+        //System.out.println("done");
+        return tmp.value;
+	}
 }
